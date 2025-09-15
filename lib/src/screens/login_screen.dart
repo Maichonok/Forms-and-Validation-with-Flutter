@@ -12,11 +12,7 @@ class _LoginScreenState extends State<LoginScreen> {
       margin: EdgeInsets.all(20.0),
       child: Form(
         child: Column(
-          children: [
-            emailField(),
-            passwordField(),
-            // submitButton(onPressed: () {}, child: Text('Login')),
-          ],
+          children: [emailField(), passwordField(), submitButton()],
         ),
       ),
     );
@@ -43,6 +39,6 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
   Widget submitButton() {
-    return ElevatedButton(onPressed: () {}, child: Text('Login'));
+    return ElevatedButton(onPressed: () {}, child: Text('Submit'));
   }
 }

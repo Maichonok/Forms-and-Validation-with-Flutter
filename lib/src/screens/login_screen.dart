@@ -12,7 +12,12 @@ class _LoginScreenState extends State<LoginScreen> {
       margin: EdgeInsets.all(20.0),
       child: Form(
         child: Column(
-          children: [emailField(), passwordField(), submitButton()],
+          children: [
+            emailField(),
+            passwordField(),
+            Container(margin: EdgeInsets.only(top: 25.0)),
+            submitButton(),
+          ],
         ),
       ),
     );
@@ -41,9 +46,7 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget submitButton() {
     return ElevatedButton(
       onPressed: () {},
-      style: ElevatedButton.styleFrom(
-        backgroundColor: Colors.blue, // цвет фона кнопки
-      ),
+      style: ElevatedButton.styleFrom(backgroundColor: Colors.blue),
       child: Text('Submit'),
     );
   }

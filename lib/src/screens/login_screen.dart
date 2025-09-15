@@ -14,7 +14,7 @@ class _LoginScreenState extends State<LoginScreen> {
         child: Column(
           children: [
             emailField(),
-            //passwordField(decoration: InputDecoration(labelText: 'Password')),
+            passwordField(),
             // submitButton(onPressed: () {}, child: Text('Login')),
           ],
         ),
@@ -34,6 +34,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   Widget passwordField() {
     return TextFormField(
+      obscureText: true,
       decoration: InputDecoration(
         labelText: 'Password',
         hintText: 'Enter your password',
